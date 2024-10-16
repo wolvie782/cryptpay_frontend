@@ -21,7 +21,7 @@ const TokenExchange = () => {
   const { address, isConnected } = useAccount();
   const [usdtValue, setUsdtValue] = useState("");
   const [gameCoinValue, setGameCoinValue] = useState("");
-  const [transactionHash, setTransactionHash] = useState<string | null>(null);
+  const [transactionHash, setTransactionHash] = useState(null);
   const { disconnect } = useDisconnect();
   const navigate = useNavigate();
 
@@ -92,7 +92,7 @@ const TokenExchange = () => {
       // );
 
       // Set the transaction hash from the response
-      // setTransactionHash(response.data.mintTransactionHash);
+      setTransactionHash(null);
       alert("Tokens minted and transferred to your wallet.");
     } catch (error: any) {
       console.error("Error during transaction:", error);
