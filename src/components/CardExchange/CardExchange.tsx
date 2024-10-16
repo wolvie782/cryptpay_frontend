@@ -25,7 +25,7 @@ const CreditCard = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://s7-stripe.rajatpatel.xyz', {
+      const response = await fetch('https://s7-stripe.rajatpatel.xyz/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
